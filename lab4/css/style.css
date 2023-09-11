@@ -6,3 +6,9 @@
     position: fixed;
     z-index: 100;
 }
+
+  
+  .c {
+    background: black;
+    width: 100%;
+  }
