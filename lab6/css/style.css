@@ -1,0 +1,22 @@
+#preloader{
+    background: #000 url(../../Resources/lab4/zerosgifs.gif) no-repeat center;
+    background-size: 25%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+
+.maps {
+  width: 60%;
+  margin: 50px auto;
+  border-radius: 10px;			
+}
+.maps iframe{
+  border-radius: 10px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 40px rgba(0,0,0,0.2);
+  width: 100%;
+  height: 50vh;
+}	

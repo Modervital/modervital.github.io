@@ -1,0 +1,17 @@
+#preloader{
+    background: #000 url(../../Resources/lab4/zerosgifs.gif) no-repeat center;
+    background-size: 25%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+  @font-face {
+    font-family: "CustomFont";
+    src: url('../font/nasalization-rg.otf');
+  }
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+
