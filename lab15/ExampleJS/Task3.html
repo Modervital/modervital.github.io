@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 15.3</title>
+    <script>
+        function encryptText() {
+            const inputText = document.getElementById("inputText").value;
+            const encryptedText = encrypt(inputText);
+            document.getElementById("encryptedText").innerHTML = `Зашифрований текст: ${encryptedText}`;
+        }
+
+        function encrypt(text) {
+            return text.split("").map(char => {
+                if (char >= 'а' && char <= 'я') {
+                    if (char === 'я') {
+                        return 'а';
+                    } else {
+                        return String.fromCharCode(char.charCodeAt(0) + 1);
+                    }
+                } else if (char >= 'А' && char <= 'Я') {
+                    if (char === 'Я') {
+                        return 'А';
+                    } else {
+                        return String.fromCharCode(char.charCodeAt(0) + 1);
+                    }
+                } else {
+                    return char;
+                }
+            }).join("");
+        }
+    </script>
+</head>
+<body>
+    <h1>Завдання 3</h1>
+    <label for="inputText">Введіть текст для шифрування:</label>
+    <input type="text" id="inputText">
+    <button onclick="encryptText()">Зашифрувати</button>
+    <div id="encryptedText"></div>
+</body>
+</html>

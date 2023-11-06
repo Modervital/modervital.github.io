@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Прізвище, група</title>
+</head>
+<body>
+    <script>
+        // Опис функції, яка обчислює суму двох чисел
+        function sum(a, b) {
+            return a + b;
+        }
+
+        // Опис функції, яка обчислює добуток двох чисел
+        function product(a, b) {
+            return a * b;
+        }
+
+        // Опис функції, яка приймає два числа і функцію як аргументи
+        // і повертає результат застосування функції до чисел
+        function apply(a, b, func) {
+            return func(a, b);
+        }
+
+        // Звертання до функції apply з різними аргументами
+        let x = 5; // перше число
+        let y = 3; // друге число
+        let z1 = apply(x, y, sum); // викликаємо apply з функцією sum
+        let z2 = apply(x, y, product); // викликаємо apply з функцією product
+
+        document.write("Сума " + x + " і " + y + " дорівнює " + z1 + "<br />"); // виводимо результат
+        document.write("Добуток " + x + " і " + y + " дорівнює " + z2 + "<br />"); // виводимо результат
+    </script>
+</body>
+</html>

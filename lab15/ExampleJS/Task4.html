@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 15.4</title>
+    <script>
+        function encryptText() {
+            const inputText = document.getElementById("inputText").value;
+            const encryptedText = encrypt(inputText);
+            document.getElementById("encryptedText").innerHTML = `Зашифрований текст: ${encryptedText}`;
+        }
+
+        function encrypt(text) {
+            const words = text.split(" ");
+            const encryptedWords = words.map(word => {
+                if (word.length < 3) {
+                    return word;  
+                }
+
+                const firstLetter = word[0];
+                const lastLetter = word[word.length - 1];
+                const middlePart = word.substring(1, word.length - 1);
+                const shuffledMiddlePart = shuffleString(middlePart);
+                return firstLetter + shuffledMiddlePart + lastLetter;
+            });
+            return encryptedWords.join(" ");
+        }
+
+        function shuffleString(str) {
+            const array = str.split("");
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array.join("");
+        }
+    </script>
+</head>
+<body>
+    <h1>Завдання 4</h1>
+    <label for="inputText">Введіть текст для шифрування:</label>
+    <input type="text" id="inputText">
+    <button onclick="encryptText()">Зашифрувати</button>
+    <div id="encryptedText"></div>
+</body>
+</html>

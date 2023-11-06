@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 5.1</title>
+    <script>
+        function insertStarsAndCountIsBefore2() {
+            const inputString = document.getElementById("inputString").value;
+            const resultContainer = document.getElementById("resultContainer");
+
+            // Вставляємо '*' між кожною парою 'AB' за допомогою регулярного виразу
+            const stringWithStars = inputString.replace(/AB/g, 'A*B');
+
+            // Рахуємо кількість 'I' перед '2' за допомогою регулярного виразу
+            const countIsBefore2 = (stringWithStars.match(/I(?=2)/g) || []).length;
+
+            resultContainer.innerHTML = `Рядок з вставленими зірочками: ${stringWithStars}<br>Кількість "I" перед "2": ${countIsBefore2}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Завдання 1</h1>
+    <label for="inputString">Введіть рядок:</label>
+    <input type="text" id="inputString">
+    <button onclick="insertStarsAndCountIsBefore2()">Виконати</button>
+    <div id="resultContainer"></div>
+</body>
+</html>

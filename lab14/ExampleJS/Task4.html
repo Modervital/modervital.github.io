@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 4 Task 4</title>
+</head>
+<body>
+<script>
+    var fruits = ['apple', 'pineapple', 'mango', 'melon', 'grape'];
+    var citrus = ['orange', 'lemon', 'lime'];
+
+    // 1. Виведіть масив fruits
+    console.log("Масив fruits: " + fruits.join(', '));
+
+    // 2. Виведіть масив citrus
+    console.log("Масив citrus: " + citrus.join(', '));
+
+    // 3. Об'єднайте масив fruits
+    var combined = fruits.concat(citrus);
+    console.log("Об'єднаний масив fruits: " + combined.join(', '));
+
+    // 4. Вставте нові елементи після mango
+    var index = fruits.indexOf('mango');
+    fruits.splice(index + 1, 0, 'pear', 'cherry', 'plum', 'raspberry', 'strawberry');
+    console.log("Масив fruits після вставки нових елементів: " + fruits.join(', '));
+
+    // 5. Видаліть останні 3 елементи
+    fruits.splice(-3);
+    console.log("Масив fruits після видалення останніх 3 елементів: " + fruits.join(', '));
+
+    // 6. Виведіть відсортований в алфавітному порядку масив fruits
+    console.log("Відсортований в алфавітному порядку масив fruits: " + fruits.sort().join(', '));
+
+    // 7. Виведіть масив fruits у зворотному алфавітному порядку
+    console.log("Масив fruits у зворотному алфавітному порядку: " + fruits.reverse().join(', '));
+
+    // 8. Виведіть масив fruits, відсортований за довжиною слів
+    fruits.sort(function(a, b) {
+        return a.length - b.length;
+    });
+    console.log("Масив fruits, відсортований за довжиною слів: " + fruits.join(', '));
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Використання циклу for...in</title>
+	</head>	
+	<body>
+		<script> 
+			"use strict";		
+			let users = {
+				user1: {
+					name: "Анна",
+					age: 25
+				},
+				user2: {
+					name: "Петро",
+					age: 30
+				},
+				user3: {
+					name: "Олена",
+					age: 28
+				}
+			};
+
+			for (let userId in users) {
+				if (users.hasOwnProperty(userId)) {
+					let user = users[userId];
+					document.write("Ім'я: " + user.name + ", Вік: " + user.age + "<br>");
+				}
+			}
+		</script>
+	</body>
+</html>

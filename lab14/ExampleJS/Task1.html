@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab13</title>
+</head>
+<body>
+<script>
+
+var treag = [];
+for (var n = 1; n <= 10; n++) {
+  treag.push(n * (n + 1) / 2);
+}
+
+console.log(treag.join('  '));
+
+var kvd = [];
+for (var i = 1; i <= 10; i++) {
+  kvd.push(i * i);
+}
+
+console.log(kvd.join('  '));
+
+var rez = treag.concat(kvd);
+console.log(rez);
+rez.reverse();
+console.log(rez);
+
+</script>
+</body>
+</html>

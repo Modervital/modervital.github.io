@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Оператор умовного переходу - switch</title>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+			let dayOfWeek = prompt("Який сьогодні день тижня:");
+			let activity = "";
+
+			switch (dayOfWeek) {
+				case "Понеділок":
+					activity = "Початок робочого тижня. Багато роботи.";
+					break;
+				case "Вівторок":
+				case "Середа":
+				case "Четвер":
+					activity = "Середня частина тижня. Продовжуйте працювати.";
+					break;
+				case "П'ятниця":
+					activity = "Останній робочий день перед вихідними. Завершуйте незавершені справи.";
+					break;
+				case "Субота":
+				case "Неділя":
+					activity = "Вихідні! Відпочивайте та розважайтесь.";
+					break;
+				default:
+					activity = "Такого дня тижня не існує.";
+			}
+
+			document.write("Сьогодні " + dayOfWeek + ". " + activity);
+		</script>
+	</body>
+</html>

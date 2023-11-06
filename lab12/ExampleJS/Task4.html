@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Обчислення факторіала</title>
+</head>
+<body>
+<script>
+    "use strict";
+    document.write("<p>Обчислення факторіала числа</p>");
+    
+    let n = parseInt(prompt("Введіть число для обчислення факторіала"));
+
+    if (n < 0) {
+        document.write("Факторіал визначений тільки для невід'ємних чисел.");
+    } else {
+        let factorialFor = 1;
+        for (let iFor = 1; iFor <= n; iFor++) {
+            factorialFor *= iFor;
+        }
+
+        document.write("Факторіал числа ", n, " обчислений з використанням for дорівнює ", factorialFor);
+
+        let factorialWhile = 1;
+        let iWhile = 1;
+        while (iWhile <= n) {
+            factorialWhile *= iWhile;
+            iWhile++;
+        }
+
+        document.write("<br>Факторіал числа ", n, " обчислений з використанням while дорівнює ", factorialWhile);
+
+        let factorialDoWhile = 1;
+        let iDoWhile = 1;
+        do {
+            factorialDoWhile *= iDoWhile;
+            iDoWhile++;
+        } while (iDoWhile <= n);
+
+        document.write("<br>Факторіал числа ", n, " обчислений з використанням do...while дорівнює ", factorialDoWhile);
+    }
+</script>
+</body>
+</html>

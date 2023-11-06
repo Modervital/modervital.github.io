@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Віталій,ПП-25</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        let birthday = new Date(2004, 11, 17); 
+        let today = new Date();
+        let age = today.getFullYear() - birthday.getFullYear();
+
+        if (today.getMonth() < birthday.getMonth() || 
+            (today.getMonth() === birthday.getMonth() && today.getDate() < birthday.getDate())) {
+            age--; 
+        }
+
+        console.log("Ваш вік: ", age);
+        alert("Ваш вік: " + age);
+    </script>
+</body>
+</html>

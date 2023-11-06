@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lab14</title>
+	</head>	
+	<body>
+		<script>
+// Створюємо масив з випадковими значеннями
+var array = [];
+for (var i = 0; i < 15; i++) {
+  array.push(Math.floor(Math.random() * 100)); // Генеруємо випадкові цілі числа від 0 до 99
+}
+
+// Виводимо початковий масив на екран
+console.log("Початковий масив: " + array.join(' '));
+
+// Завдання 1: Знайти максимальний елемент та поміняти його місцями з останнім елементом масиву
+var maxIndex = array.indexOf(Math.max.apply(null, array));
+var lastIndex = array.length - 1;
+var temp = array[maxIndex];
+array[maxIndex] = array[lastIndex];
+array[lastIndex] = temp;
+
+console.log("Після завдання 1: " + array.join(' '));
+
+// Завдання 2: Знайти мінімальний елемент та поміняти його місцями з попереднім елементом масиву
+var minIndex = array.indexOf(Math.min.apply(null, array));
+var prevIndex = minIndex - 1;
+temp = array[minIndex];
+array[minIndex] = array[prevIndex];
+array[prevIndex] = temp;
+
+console.log("Після завдання 2: " + array.join(' '));
+
+// Завдання 3: Знайти мінімальний елемент та поміняти його місцями з наступним елементом масиву
+var nextIndex = minIndex + 1;
+temp = array[minIndex];
+array[minIndex] = array[nextIndex];
+array[nextIndex] = temp;
+
+console.log("Після завдання 3: " + array.join(' '));
+
+// Завдання 4: Знайти максимальний елемент та поміняти його місцями з шостим елементом масиву
+maxIndex = array.indexOf(Math.max.apply(null, array));
+var sixthIndex = 5;
+temp = array[maxIndex];
+array[maxIndex] = array[sixthIndex];
+array[sixthIndex] = temp;
+
+console.log("Після завдання 4: " + array.join(' '));
+
+// Завдання 5: Знайти максимальний елемент, надати його значення останньому елементу масиву, а замість максимального числа записати – 1
+maxIndex = array.indexOf(Math.max.apply(null, array));
+array[maxIndex] = array[array.length - 1];
+array[array.length - 1] = 1;
+
+console.log("Після завдання 5: " + array.join(' '));
+
+// Завдання 6: Знайти мінімальний елемент, присвоїти його значення першому елементу масиву, а замість мінімального елемента записати число 9999
+minIndex = array.indexOf(Math.min.apply(null, array));
+array[0] = array[minIndex];
+array[minIndex] = 9999;
+
+console.log("Після завдання 6: " + array.join(' '));
+
+// Завдання 7: Знайти мінімальний елемент та поміняти його місцями з третім елементом масиву
+minIndex = array.indexOf(Math.min.apply(null, array));
+var thirdIndex = 2;
+temp = array[minIndex];
+array[minIndex] = array[thirdIndex];
+array[thirdIndex] = temp;
+
+console.log("Після завдання 7: " + array.join(' '));
+
+// Завдання 8: Знайти мінімальний елемент та замінити його на суму першого та останнього елементів
+minIndex = array.indexOf(Math.min.apply(null, array));
+array[minIndex] = array[0] + array[array.length - 1];
+
+console.log("Після завдання 8: " + array.join(' '));
+
+// Завдання 9: Знайти максимальний елемент та поміняти його місцями з передостаннім елементом масиву
+maxIndex = array.indexOf(Math.max.apply(null, array));
+var penultimateIndex = array.length - 2;
+temp = array[maxIndex];
+array[maxIndex] = array[penultimateIndex];
+array[penultimateIndex] = temp;
+
+console.log("Після завдання 9: " + array.join(' '));
+
+// Завдання 10: Знайти мінімальний елемент, присвоїти його значення останньому елементу масиву, а замість мінімального елемента записати значення 3N
+minIndex = array.indexOf(Math.min.apply(null, array));
+array[array.length - 1] = array[minIndex];
+array[minIndex] = 3 * array[minIndex];
+
+console.log("Після завдання 10: " + array.join(' '));
+
+// Завдання 11: Знайти мінімальний елемент і поміняти його місцями з елементом масиву, номер якого задано (для прикладу, замінюємо з 7-м елементом)
+var specifiedIndex = 6; // 7-й елемент масиву
+temp = array[minIndex];
+array[minIndex] = array[specifiedIndex];
+array[specifiedIndex] = temp;
+
+console.log("Після завдання 11: " + array.join(' '));
+
+// Завдання 12: Знайти максимальний елемент і поміняти його місцями зі другим елементом масиву
+maxIndex = array.indexOf(Math.max.apply(null, array));
+var secondIndex = 1;
+temp = array[maxIndex];
+array[maxIndex] = array[secondIndex];
+array[secondIndex] = temp;
+
+console.log("Після завдання 12: " + array.join(' '));
+
+// Завдання 13: Знайти мінімальний елемент та поміняти його місцями з останнім елементом масиву
+minIndex = array.indexOf(Math.min.apply(null, array));
+temp = array[minIndex];
+array[minIndex] = array[array.length - 1];
+array[array.length - 1] = temp;
+
+console.log("Після завдання 13: " + array.join(' '));
+
+// Завдання 14: Знайти мінімальний елемент та поміняти його місцями з передостаннім елементом масиву
+minIndex = array.indexOf(Math.min.apply(null, array));
+temp = array[minIndex];
+array[minIndex] = array[penultimateIndex];
+array[penultimateIndex] = temp;
+
+console.log("Після завдання 14: " + array.join(' '));
+
+		</script>
+	</body>
+</html>

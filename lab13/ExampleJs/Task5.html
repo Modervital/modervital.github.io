@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Прізвище, група</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        function drawRectangle(width, height, color = "black", fill = false) {
+            document.write(`<canvas id="canvas" width="${width}" height="${height}"></canvas>`);
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext("2d");
+            ctx.strokeStyle = color;
+            ctx.strokeRect(0, 0, width, height);
+            if (fill) {
+                ctx.fillStyle = color;
+                ctx.fillRect(0, 0, width, height);
+            }
+        }
+
+        drawRectangle(200, 100, "red"); // малюємо червоний прямокутник без заливки
+        drawRectangle(300, 150, "green", true); // малюємо зелений прямокутник з заливкою
+        drawRectangle(100, 100); // малюємо чорний прямокутник без заливки
+    </script>
+</body>
+</html>

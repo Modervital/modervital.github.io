@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Використання об'єкта Date</title>
+</head>
+<body>
+    <h1>Назви днів тижня</h1>
+    <p id="dayName"></p>
+
+    <script>
+        function getDayName(dayIndex) {
+            const daysOfWeek = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
+            return daysOfWeek[dayIndex];
+        }
+
+
+        const currentDate = new Date();
+        const currentDayIndex = currentDate.getDay(); 
+
+
+        const dayNameElement = document.getElementById("dayName");
+        dayNameElement.textContent = getDayName(currentDayIndex);
+        dayNameElement.style.fontSize = "24px"; 
+        dayNameElement.style.color = "blue";    
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 2</title>
+</head>
+<body>
+    <script>
+       
+        function addDotsToWords(text) {
+            let words = text.split(' '); 
+            let result = [];
+
+            for (let i = 0; i < words.length; i++) {
+                let word = words[i];
+                let lastChar = word.charAt(word.length - 1);
+                let dot = lastChar.match(/[.,;!?]/) ? '' : '.'; 
+                result.push(word + dot); 
+            }
+
+            return result.join(' '); 
+        }
+
+        let inputText = "Це завдання номер 2 вІІІ лабораторній роботі. Не забудьте виконати його!";
+        let outputText = addDotsToWords(inputText);
+        let fifthWord = inputText.split(' ')[4]; 
+        let countOfI = (fifthWord.match(/І/g) || []).length; 
+
+        document.write("<p>Текст після обробки: " + outputText + "</p>");
+        document.write("<p>Кількість літер 'І' у п'ятому слові: " + countOfI + "</p>");
+    </script>
+</body>
+</html>
